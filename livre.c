@@ -5,6 +5,7 @@ void saisirLivre(T_livre * ptrL)
 {
 lireChaine("TITRE :", (ptrL->titre), MAX_TITRE );
 lireChaine("AUTEUR :", (ptrL->auteur ), MAX);
+ptrL->emprunteur[0]='\0';
 }
 
 
@@ -15,8 +16,9 @@ printf(" - ");
 afficherChaine("AUTEUR :", (ptrL->auteur ));
 printf(" - ");
 afficherChaine("CODE :", (ptrL->code));
+printf(" - ");
+afficherChaine("EMPRUNTEUR",(ptrL->emprunteur));
 printf("\n");
-afficherChaine("CODE :", (ptrL ->code));
-printf("\n");
+
 }
 
