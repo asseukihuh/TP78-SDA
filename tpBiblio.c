@@ -76,12 +76,16 @@ if (fic!=NULL)
 
 int ajouterLivre(T_Bibliotheque  *ptrB)
 {
+    T_Code code;
 if (ptrB->nbLivres<CAPACITE_BIBLIO)// reste t il de la place?
 	{
 	saisirLivre(&(ptrB->etagere[ptrB->nbLivres]));
+    lire(code,K_MaxCode);
+    if (verifCode(ptrB,code)== 1) lireChaine("Code :",ptrB->etagere[ptrB->nbLivres].code ,K_MaxCode);
+}
 	ptrB->nbLivres++;
 	return 1;
-	}
+	
 	
 	
 return 0;
@@ -136,7 +140,8 @@ int supprlivre(T_Bibliotheque *ptrB, char titre[])
 		{
 			init(ptrB);
 			return 1;
-		}else{
+		}else
+        {
 			int i;
 
 			for (i = 0; i < ptrB->nbLivres; i++)
@@ -195,4 +200,14 @@ int restituerLivre(T_Bibliotheque *ptrB, const T_Code ptrC){
 			}
 	}
 	
+}
+
+
+int verifCode(T_Bibliotheque *ptrB, const T_Code code){
+    int i =0;
+    while( code != ptrB->etagere[i].code && i < ptrB->nbLivres) i++;
+    if ( i == ptrB->nbLivres) return 1;
+    else return -1;
+
+
 }
