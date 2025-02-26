@@ -7,11 +7,14 @@ lireChaine("TITRE :", (ptrL->titre), MAX_TITRE );
 lireChaine("AUTEUR :", (ptrL->auteur ), MAX);
 }
 
+
 void afficherLivre(const T_livre *ptrL)
 {
 afficherChaine("TITRE :", (ptrL->titre));
 printf(" - ");
 afficherChaine("AUTEUR :", (ptrL->auteur ));
+printf(" - ");
+afficherChaine("CODE :", (ptrL->code));
 printf("\n");
 afficherChaine("CODE :", (ptrL ->code));
 printf("\n");
