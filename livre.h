@@ -16,7 +16,7 @@
 typedef char T_Titre[K_MaxTit];
 typedef char T_Aut[K_MaxAut];
 typedef char T_Edit[K_MaxEdit];
-// (pour le moment en commentaire) typedef char T_Emp[K_MaxEmp]; //utilisez d'abord ce type puis, remplacez le par celui ci dessous ()
+typedef char T_Emp[K_MaxEmp]; //utilisez d'abord ce type puis, remplacez le par celui ci dessous ()
 typedef char T_Code[K_MaxCode];
 typedef int T_annee;
 
@@ -26,14 +26,14 @@ typedef int T_annee;
 typedef enum {lu,ma,me,je,ve,sa,di} T_Jour ;
 typedef enum  {janv,fevr,mars,avri,mai,juin,juil,aout,sept,octo,nove,dece} T_Mois ;
 
-typedef struct
+/*typedef struct
 {
 char nomemprunteur[50];
 T_Jour lejour;
 int ledate;
 T_Mois lemois; //janvier commence à 0 
-int lannee;
-} T_Emp ; 
+int lannee
+} T_Emp ; */
 
 
 
