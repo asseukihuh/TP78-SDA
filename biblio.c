@@ -43,6 +43,8 @@ T_Bibliotheque B;
 char auteur[50];
 init( &B );
 char titre[MAX_TITRE];
+T_Code code;
+T_Emp emprunteur;
 do
 {
 chx= menu();
@@ -97,7 +99,34 @@ switch(chx)
 				printf("Suppression réussie");
 			}
 			break;
+
+	case 6 :
+			lire(code, MAX_CODE);
+			lire(emprunteur, K_MaxEmp);
+			reponse = emprunterLivre(&B, code, emprunteur);
+			if (reponse == -1)
+				printf("Code inexistant ou déja");
+			else if (reponse = 0)
+				printf("Livre déja emprunté");
+			else{
+				printf("Nom de l'emprunteur et date :%s", emprunteur);
+			}
+			break;
+	
+	case 7 :
+			lire(code, MAX_CODE);
+			reponse = restituerLivre(&B, code);
+			if (reponse == -1)
+				printf("Code inexistant");
+			else if (reponse = 0)
+				printf("Livre déja emprunté");
+			else{
+				printf("livre bien restitué !");
+			}
+			break;
 			
+			
+
 	}
 
 }while(chx!=0);

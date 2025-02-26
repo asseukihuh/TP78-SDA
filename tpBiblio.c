@@ -154,3 +154,23 @@ int supprlivre(T_Bibliotheque *ptrB, char titre[])
 	}
 
 }
+
+int restituerLivre(T_Bibliotheque *ptrB, const T_Code ptrC){
+	int i = 0;
+	if (rechercherCode(ptrC)==-1)
+	{
+		return -1;
+	}else{
+		for (i = 0; i < ptrB->nbLivres; i++)
+			{
+				if(strcmp(ptrB->etagere[i].emprunteur, "\0")){
+					return 0;
+				}else{
+					strcpy(ptrB->etagere[i].emprunteur, "\0");
+					printf("Livre restitué par : %s",ptrB->etagere[i].emprunteur);
+					return 1;
+				}
+			}
+	}
+	
+}
