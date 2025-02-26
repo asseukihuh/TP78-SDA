@@ -143,8 +143,8 @@ int supprlivre(T_Bibliotheque *ptrB, char titre[])
 			{
 				if (strcmp(ptrB->etagere[i].titre,titre)==0)
 				{
-					strcpy(ptrB->etagere[i].titre, ptrB->etagere[ptrB->nbLivres].titre);
-					strcpy(ptrB->etagere[i].auteur, ptrB->etagere[ptrB->nbLivres].auteur);
+					strcpy(ptrB->etagere[i].titre, ptrB->etagere[ptrB->nbLivres-1].titre);
+					strcpy(ptrB->etagere[i].auteur, ptrB->etagere[ptrB->nbLivres-1].auteur);
 					ptrB->nbLivres--;
 				}
 			}

@@ -13,13 +13,13 @@ printf("\n 5 - supprimer un livre de la bibliotheque");
 
 // au programme du TP8 :
 // ajouter le champ emprunteur à votre structure T_Livre
-/*
+
 printf("\n 6 - emprunter un livre de la bibliotheque");
 printf("\n 7 - restituer/rendre un livre de la bibliotheque");
 printf("\n 8 - trier les livres (par titre)");
 printf("\n 9 - trier les livres (par auteur)");
 printf("\n 10 - trier les livres (par annee)");
-*/
+
 // si les 5 choix (6-10) sont bien codés, changez le type T_Emp et remplacez-le par la structure T_Emp visible dans livre.h
 // vous pourrez alors faire les menus 11,12,etc...
 // printf("\n 11- lister les livres disponibles "); 
@@ -73,10 +73,10 @@ switch(chx)
 	
 	case 3 : 
 	
-	lire(titre,MAX_TITRE);
-	reponse = rechercherTitre(&B , titre );
-	printf("Ce livre est présent en %d exemplaires\n",reponse);
-	break;
+		lire(titre,MAX_TITRE);
+		reponse = rechercherTitre(&B , titre );
+		printf("Ce livre est présent en %d exemplaires\n",reponse);
+		break;
 
 	case 4 :
 			if (afficherParAuteur(&B, auteur)==0)	
