@@ -1,6 +1,9 @@
 # include "biblio.h"
 
 
+//ADJLAZHDVAZHDKVHAZKVD
+
+
 void init (T_Bibliotheque *ptrB)
 {
 
