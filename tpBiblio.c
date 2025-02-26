@@ -117,9 +117,9 @@ int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[])
 		else{
 			for (i = 0; i < ptrB->nbLivres; i++)
 			{
-				if (ptrB->etagere[i].auteur==auteur)
+				if (strcmp(ptrB->etagere[i].auteur ,auteur)== 0)
 				{
-					afficherLivre( &(ptrB->etagere[i]));
+					afficherLivre(&(ptrB->etagere[i]));
 				}
 			}
 			return 1;
