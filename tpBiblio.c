@@ -154,3 +154,25 @@ int supprlivre(T_Bibliotheque *ptrB, char titre[])
 	}
 
 }
+
+
+int rechercherCode(T_Bibliotheque *ptrB, T_Code code){
+    int i = 0;
+    while (strcmp(ptrB->etagere[i].code,code)!=0 && i < ptrB->nbLivres){
+        i++;
+    }
+    if ( i == ptrB->nbLivres) return -1;
+    else return i;
+}
+
+
+int empruntLivre(T_Bibliotheque *ptrB, T_Code code, T_Emp emprunteur){
+    int posLivre = rechercherCode(ptrB , code);
+
+    if (posLivre == -1) return -1;
+    if (ptrB->etagere[posLivre].emprunteur[0] != '\0') return 0;
+    else{
+        strcpy(ptrB->etagere[posLivre].emprunteur,emprunteur);
+        return 1;
+    }
+}
