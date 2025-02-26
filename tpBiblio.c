@@ -95,3 +95,41 @@ if(ptrB->nbLivres==0)
 		}
 }
 
+
+int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[])
+{
+	int i=0;
+	if (ptrB->nbLivres==0)
+		return 0;
+		else{
+			for (i = 0; i < ptrB->nbLivres; i++)
+			{
+				if (ptrB->etagere[i].auteur==auteur)
+				{
+					afficherLivre( &(ptrB->etagere[i]));
+				}
+			}
+			return 1;
+		}
+}
+
+int supprlivre(T_Bibliotheque *ptrB, char titre[])
+{
+	if (rechercherTitre(titre)==0)
+		return 0;
+		else{
+			int i;
+
+			for (i = 0; i < ptrB->nbLivres; i++)
+			{
+				if (ptrB->etagere[i].titre==titre)
+				{
+					ptrB->etagere[i]=ptrB->etagere[ptrB->nbLivres];
+					ptrB->nbLivres--;
+				}
+			}
+			return 1;
+			
+		}
+
+}

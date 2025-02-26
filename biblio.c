@@ -57,7 +57,7 @@ switch(chx)
 			if (reponse==0)	
 					printf("La bibliotheque est vide");
 
-			break;	
+			break;
 	
 	
 	
@@ -71,7 +71,6 @@ switch(chx)
 return 0;
 
 }
-
 
 
 
