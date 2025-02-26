@@ -41,7 +41,7 @@ int main()
 int reponse,chx;
 T_Bibliotheque B; 
 init( &B );
-
+char titre[MAX_TITRE];
 do
 {
 chx= menu();
@@ -49,19 +49,20 @@ switch(chx)
 	{
 	case  1 : reponse = ajouterLivre(   &B  );
 				if (reponse==1)
-					printf(" ajout reussi !!");
+					printf(" ajout reussi !!\n");
 					else
-					printf("impossible d ajouter (bibliotheque pleine)");
+					printf("impossible d ajouter (bibliotheque pleine)\n");
 			break;
 	case 2 : reponse=afficherBibliotheque(&B);
 			if (reponse==0)	
-					printf("La bibliotheque est vide");
+					printf("La bibliotheque est vide\n");
 
 			break;
 	
-	
-	
-	
+	case 3 : 
+	lire(titre,MAX_TITRE);
+	reponse = rechercherTitre(&B , titre );
+	printf("Ce livre est présent en %d exemplaires\n",reponse);
 	
 	}
 
