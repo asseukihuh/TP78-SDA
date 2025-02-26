@@ -177,12 +177,13 @@ int empruntLivre(T_Bibliotheque *ptrB, T_Code code, T_Emp emprunteur){
     }
 }
 
-int restituerLivre(T_Bibliotheque *ptrB, const T_Code ptrC){
+int restituerLivre(T_Bibliotheque *ptrB, T_Code code){
 	int i = 0;
-	if (rechercherCode(ptrB, ptrC)==-1)
+	if (rechercherCode(ptrB, code)==-1)
 	{
 		return -1;
-	}else{
+	}
+	else{
 		for (i = 0; i < ptrB->nbLivres; i++)
 			{
 				if(strcmp(ptrB->etagere[i].emprunteur, "\0")){
@@ -194,5 +195,5 @@ int restituerLivre(T_Bibliotheque *ptrB, const T_Code ptrC){
 				}
 			}
 	}
-	
+	return 1;
 }

@@ -24,5 +24,8 @@ void sauvegarde(T_Bibliotheque *ptrB);
 int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[]);
 int supprlivre(T_Bibliotheque *ptrB, char titre[]);
 int rechercherTitre(T_Bibliotheque *B ,char titre[]);
+int rechercherCode(T_Bibliotheque *ptrB, T_Code code);
+int empruntLivre(T_Bibliotheque *ptrB, T_Code code, T_Emp emprunteur);
+int restituerLivre(T_Bibliotheque *ptrB, T_Code code);
 
 #endif

@@ -103,14 +103,14 @@ switch(chx)
 	case 6 :
 			lire(code, MAX_CODE);
 			lire(emprunteur, K_MaxEmp);
-			reponse = emprunterLivre(&B, code, emprunteur);
+			reponse = empruntLivre(&B, code, emprunteur);
 			if (reponse == -1)
 				printf("Code inexistant ou déja");
-			else if (reponse = 0)
-				printf("Livre déja emprunté");
-			else{
-				printf("Nom de l'emprunteur et date :%s", emprunteur);
-			}
+			else
+				if(reponse == 0)
+					printf("Livre déja emprunté");
+				else
+					printf("Nom de l'emprunteur et date :%s", emprunteur);
 			break;
 	
 	case 7 :
@@ -118,11 +118,13 @@ switch(chx)
 			reponse = restituerLivre(&B, code);
 			if (reponse == -1)
 				printf("Code inexistant");
-			else if (reponse = 0)
+			else
+				if(reponse == 0){
 				printf("Livre déja emprunté");
-			else{
-				printf("livre bien restitué !");
-			}
+				}
+				else{
+					printf("livre bien restitué !");
+				}
 			break;
 			
 			
