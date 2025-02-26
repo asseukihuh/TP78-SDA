@@ -40,6 +40,7 @@ int main()
 {
 int reponse,chx;
 T_Bibliotheque B; 
+char auteur[50];
 init( &B );
 char titre[MAX_TITRE];
 do
@@ -76,7 +77,27 @@ switch(chx)
 	reponse = rechercherTitre(&B , titre );
 	printf("Ce livre est présent en %d exemplaires\n",reponse);
 	break;
-	
+
+	case 4 :
+			if (afficherParAuteur(&B, auteur)==0)	
+				printf("Aucun livre avec ce nom d'auteur\n");
+				else{
+					lire(auteur,50);
+					printf("nom auteur : %s",auteur);
+					afficherParAuteur(&B, auteur);
+				}
+			break;
+
+	case 5 :
+			lire(titre,MAX_TITRE);
+			reponse = supprlivre(&B, titre);
+			if(reponse==0)
+				printf("Bibliotheque vide");
+			else{
+				printf("Suppression réussie");
+			}
+			break;
+			
 	}
 
 }while(chx!=0);

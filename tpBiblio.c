@@ -115,11 +115,11 @@ int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[])
 	if (ptrB->nbLivres==0)
 		return 0;
 		else{
-			for (i = 0; i < ptrB->nbLivres; i++)
+			for(i=0;i<ptrB->nbLivres;i++)
 			{
-				if (ptrB->etagere[i].auteur==auteur)
+				if (strcmp(ptrB->etagere[i].auteur, auteur)==0)
 				{
-					afficherLivre( &(ptrB->etagere[i]));
+					afficherLivre(&(ptrB->etagere[i]));
 				}
 			}
 			return 1;
@@ -128,21 +128,29 @@ int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[])
 
 int supprlivre(T_Bibliotheque *ptrB, char titre[])
 {
-	if (rechercherTitre(ptrB ,titre)==0)
+	if(rechercherTitre(ptrB ,titre)==0)
 		return 0;
-		else{
+	else{
+		
+		if(strcmp(ptrB->etagere[0].titre,titre)==0 && ptrB->nbLivres==1)
+		{
+			init(ptrB);
+			return 1;
+		}else{
 			int i;
 
 			for (i = 0; i < ptrB->nbLivres; i++)
 			{
-				if (ptrB->etagere[i].titre==titre)
+				if (strcmp(ptrB->etagere[i].titre,titre)==0)
 				{
-					ptrB->etagere[i]=ptrB->etagere[ptrB->nbLivres];
+					strcpy(ptrB->etagere[i].titre, ptrB->etagere[ptrB->nbLivres].titre);
+					strcpy(ptrB->etagere[i].auteur, ptrB->etagere[ptrB->nbLivres].auteur);
 					ptrB->nbLivres--;
 				}
 			}
 			return 1;
 			
 		}
+	}
 
 }

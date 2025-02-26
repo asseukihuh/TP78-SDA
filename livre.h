@@ -42,7 +42,7 @@ int lannee;
 // les autres champs
 typedef struct
 {
-//T_Code code; // code de reference du livre dans la biblio. 
+T_Code code; // code de reference du livre dans la biblio. 
 // Attention il peut y avoir pluieurs livres de même titre (le code diffèrent dans ce cas)
 T_Titre titre; // Titre du livre
 T_Aut auteur; // Nom de l'auteur
