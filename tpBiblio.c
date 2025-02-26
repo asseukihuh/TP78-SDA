@@ -128,7 +128,7 @@ int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[])
 
 int supprlivre(T_Bibliotheque *ptrB, char titre[])
 {
-	if (rechercherTitre(titre)==0)
+	if (rechercherTitre(ptrB ,titre)==0)
 		return 0;
 		else{
 			int i;

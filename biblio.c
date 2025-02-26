@@ -47,6 +47,17 @@ do
 chx= menu();
 switch(chx)
 	{
+	case 15: 
+	printf("Chargement en cours");
+	chargement(&B);
+	printf("Chargement réussie");
+	break;
+	case 14: 
+			printf("Sauvegarde en cours");
+			sauvegarde(&B);
+			printf("Sauvegarde réussie");
+			break;
+	
 	case  1 : reponse = ajouterLivre(   &B  );
 				if (reponse==1)
 					printf(" ajout reussi !!\n");
@@ -60,9 +71,11 @@ switch(chx)
 			break;
 	
 	case 3 : 
+	
 	lire(titre,MAX_TITRE);
 	reponse = rechercherTitre(&B , titre );
 	printf("Ce livre est présent en %d exemplaires\n",reponse);
+	break;
 	
 	}
 

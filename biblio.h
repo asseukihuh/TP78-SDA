@@ -23,6 +23,6 @@ void chargement(T_Bibliotheque *ptrB); //ajouter le 13/02/2025 prototypes des 2 
 void sauvegarde(T_Bibliotheque *ptrB);
 int afficherParAuteur(const T_Bibliotheque *ptrB, char auteur[]);
 int supprlivre(T_Bibliotheque *ptrB, char titre[]);
-
+int rechercherTitre(T_Bibliotheque *B ,char titre[]);
 
 #endif
