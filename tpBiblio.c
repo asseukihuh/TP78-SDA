@@ -1,5 +1,18 @@
 #include "biblio.h"
 
+
+// Fonctions rechercher titre 
+int rechercherTitre(T_Bibliotheque * B,char title[]){
+    int cbnLivre = 0;
+    for(int i = 0 ; i < B->nbLivres ; i++){
+        if (strcmp(B->etagere[i].titre,title) == 0) cbnLivre = cbnLivre + 1 ;
+    }
+    return cbnLivre;
+}
+
+
+
+
 void init (T_Bibliotheque *ptrB)
 {
 

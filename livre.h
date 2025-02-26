@@ -32,8 +32,8 @@ char nomemprunteur[50];
 T_Jour lejour;
 int ledate;
 T_Mois lemois; //janvier commence à 0 
-int lannee
-}T_Emp ;
+int lannee;
+} T_Emp ; 
 
 
 
