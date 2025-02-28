@@ -80,8 +80,8 @@ int ajouterLivre(T_Bibliotheque  *ptrB)
 if (ptrB->nbLivres<CAPACITE_BIBLIO)// reste t il de la place?
 	{
 	saisirLivre(&(ptrB->etagere[ptrB->nbLivres]));
-    lire(code,K_MaxCode);
-    if (verifCode(ptrB,code)== 1) lireChaine("Code :",ptrB->etagere[ptrB->nbLivres].code ,K_MaxCode);
+    //lire(code,K_MaxCode);
+    if (verifCode(ptrB,code)== 1) lireChaine("CODE :",ptrB->etagere[ptrB->nbLivres].code ,K_MaxCode);
 }
 	ptrB->nbLivres++;
 	return 1;
