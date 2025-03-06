@@ -212,3 +212,15 @@ int verifCode(T_Bibliotheque *ptrB, const T_Code code){
 
 
 }
+
+int trierLivresTitre(T_Bibliotheque *ptrB){
+	return 1;
+}
+
+int trierLivresAuteur(T_Bibliotheque *ptrB){
+	return 1;
+}
+
+int trierLivresAnnee(T_Bibliotheque *ptrB){
+	return 1;
+}

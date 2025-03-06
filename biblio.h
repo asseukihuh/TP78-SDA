@@ -28,5 +28,8 @@ int rechercherCode(T_Bibliotheque *ptrB, T_Code code);
 int empruntLivre(T_Bibliotheque *ptrB, T_Code code, T_Emp emprunteur);
 int restituerLivre(T_Bibliotheque *ptrB, T_Code code);
 int verifCode(T_Bibliotheque *ptrB, const T_Code code);
+int trierLivresAnnee(T_Bibliotheque *ptrB);
+int trierLivresAuteur(T_Bibliotheque *ptrB);
+int trierLivresTitre(T_Bibliotheque *ptrB);
 
 #endif

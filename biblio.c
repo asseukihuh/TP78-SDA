@@ -128,7 +128,16 @@ switch(chx)
 			break;
 			
 			
+	case 8 :
+			reponse = trierLivresTitre(&B);
 
+	case 9 :
+			reponse = trierLivresAuteur(&B);
+
+	case 10 :
+			reponse = trierLivresAnnee(&B);
+			
+			
 	}
 
 }while(chx!=0);
