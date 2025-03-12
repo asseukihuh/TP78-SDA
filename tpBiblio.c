@@ -238,9 +238,55 @@ int trierLivresTitre(T_Bibliotheque *ptrB) {
 }
 
 int trierLivresAuteur(T_Bibliotheque *ptrB){
-	return 1;
+    if (ptrB->nbLivres == 0) return 0;
+
+    int i, j, minIndex;
+    T_livre temp;
+
+    for (i = 0; i < ptrB->nbLivres - 1; i++) {
+        minIndex = i;
+
+        for (j = i + 1; j < ptrB->nbLivres; j++) {
+            if (strcmp(ptrB->etagere[j].auteur, ptrB->etagere[minIndex].auteur) < 0) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i) {
+            temp = ptrB->etagere[i];
+            ptrB->etagere[i] = ptrB->etagere[minIndex];
+            ptrB->etagere[minIndex] = temp;
+        }
+    }
+
+    return 1;
 }
 
 int trierLivresAnnee(T_Bibliotheque *ptrB){
+    if (ptrB->nbLivres == 0) return 0;
+
+    int i, j, minIndex;
+    T_livre temp;
+
+    for (i = 0; i < ptrB->nbLivres - 1; i++) {
+        minIndex = i;
+
+        for (j = i + 1; j < ptrB->nbLivres; j++) {
+            if (strcmp(ptrB->etagere[j].auteur, ptrB->etagere[minIndex].auteur) < 0) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i) {
+            temp = ptrB->etagere[i];
+            ptrB->etagere[i] = ptrB->etagere[minIndex];
+            ptrB->etagere[minIndex] = temp;
+        }
+    }
+
+    return 1;
+}
+
+int AfficherLivresDispo(T_Bibliotheque *ptrB){
 	return 1;
 }

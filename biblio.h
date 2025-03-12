@@ -31,5 +31,6 @@ int verifCode(T_Bibliotheque *ptrB, const T_Code code);
 int trierLivresAnnee(T_Bibliotheque *ptrB);
 int trierLivresAuteur(T_Bibliotheque *ptrB);
 int trierLivresTitre(T_Bibliotheque *ptrB);
+int AfficherLivresDispo(T_Bibliotheque *ptrB);
 
 #endif
