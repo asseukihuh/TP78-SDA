@@ -213,8 +213,30 @@ int verifCode(T_Bibliotheque *ptrB, const T_Code code){
 
 }
 
-int trierLivresTitre(T_Bibliotheque *ptrB){
-	return 1;
+
+int trierLivresTitre(T_Bibliotheque *ptrB) {
+    if (ptrB->nbLivres == 0) return 0;
+
+    int i, j, minIndex;
+    T_livre temp;
+
+    for (i = 0; i < ptrB->nbLivres - 1; i++) {
+        minIndex = i;
+
+        for (j = i + 1; j < ptrB->nbLivres; j++) {
+            if (strcmp(ptrB->etagere[j].titre, ptrB->etagere[minIndex].titre) < 0) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i) {
+            temp = ptrB->etagere[i];
+            ptrB->etagere[i] = ptrB->etagere[minIndex];
+            ptrB->etagere[minIndex] = temp;
+        }
+    }
+
+    return 1;
 }
 
 int trierLivresAuteur(T_Bibliotheque *ptrB){
