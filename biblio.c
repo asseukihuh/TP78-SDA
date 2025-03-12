@@ -129,14 +129,31 @@ switch(chx)
 			
 			
 	case 8 :
-			
+			reponse = trierLivresTitre(&B);
+			if(reponse == 0){
+				printf("Impossible de trier");
+			}else{
+				printf("Bibliothèque triée par titre avec succès");
+			}
+			break;	
 
 	case 9 :
-			
+			reponse = trierLivresAuteur(&B);
+			if(reponse == 0){
+				printf("Impossible de trier");
+			}else{
+				printf("Bibliothèque triée par auteur avec succès");
+			}
+			break;
 
 	case 10 :
-			
-			
+			reponse = trierLivresAnnee(&B);
+			if(reponse == 0){
+				printf("Impossible de trier");
+			}else{
+				printf("Bibliothèque triée par année avec succès");
+			}
+			break;
 			
 	}
 
