@@ -287,6 +287,20 @@ int trierLivresAnnee(T_Bibliotheque *ptrB){
     return 1;
 }
 
-int AfficherLivresDispo(T_Bibliotheque *ptrB){
-	return 1;
+int AfficherLivresDispo(T_Bibliotheque *ptrB)
+{
+	int i;
+	if(ptrB->nbLivres==0)
+		return 0;
+	else
+	{
+		for(i=0;i<ptrB->nbLivres;i++)
+		{
+			//printf("%d",strcmp(ptrB->etagere[i].emprunteur.nomemprunteur,""));
+			if(strcmp(ptrB->etagere[i].emprunteur.nomemprunteur,"")== 0){
+				afficherLivre( &(ptrB->etagere[i]));
+			}
+		}
+		return 1;
+	}
 }
