@@ -330,3 +330,24 @@ int AfficherLivresDispo(T_Bibliotheque *ptrB)
 		return 1;
 
 }
+
+
+int ListerEmpruntsRetard(T_Bibliotheque *ptrB)
+{
+	int i;
+	int retard = 0;
+	if(ptrB->nbLivres==0)
+		return 0;
+	else
+	{
+		for(i=0;i<ptrB->nbLivres;i++)
+		{
+			
+			if(strcmp(ptrB->etagere[i].emprunteur.nomemprunteur,"")== 0){
+				afficherLivre( &(ptrB->etagere[i]));
+			}
+		}
+		return 1;
+	}
+	return 1;
+}
