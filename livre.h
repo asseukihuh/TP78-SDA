@@ -16,7 +16,7 @@
 typedef char T_Titre[K_MaxTit];
 typedef char T_Aut[K_MaxAut];
 typedef char T_Edit[K_MaxEdit];
-typedef char T_Emp[K_MaxEmp]; //utilisez d'abord ce type puis, remplacez le par celui ci dessous ()
+//typedef char T_Emp[K_MaxEmp]; //utilisez d'abord ce type puis, remplacez le par celui ci dessous ()
 typedef char T_Code[K_MaxCode];
 typedef int T_annee;
 

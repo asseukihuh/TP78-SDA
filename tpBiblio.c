@@ -173,9 +173,9 @@ int empruntLivre(T_Bibliotheque *ptrB, T_Code code, T_Emp emprunteur){
     int posLivre = rechercherCode(ptrB , code);
 
     if (posLivre == -1) return -1;
-    if (strcmp(ptrB->etagere[posLivre].emprunteur,"")!= 0) return 0;
+    if (strcmp(ptrB->etagere[posLivre].emprunteur.nomemprunteur,"")!= 0) return 0;
     else{
-        strcpy(ptrB->etagere[posLivre].emprunteur,emprunteur);
+        strcpy(ptrB->etagere[posLivre].emprunteur.nomemprunteur,emprunteur.nomemprunteur);
         return 1;
     }
 }
@@ -189,11 +189,11 @@ int restituerLivre(T_Bibliotheque *ptrB, T_Code code){
 	else{
 		for (i = 0; i < ptrB->nbLivres; i++)
 			{
-				if(strcmp(ptrB->etagere[i].emprunteur, "\0")==0){
+				if(strcmp(ptrB->etagere[i].emprunteur.nomemprunteur, "\0")==0){
 					return 0;
 				}else{
-					strcpy(ptrB->etagere[i].emprunteur, "\0");
-					printf("Livre restitué par : %s",ptrB->etagere[i].emprunteur);
+					strcpy(ptrB->etagere[i].emprunteur.nomemprunteur, "\0");
+					printf("Livre restitué par : %s",ptrB->etagere[i].emprunteur.nomemprunteur);
 					return 1;
 				}
 			}
