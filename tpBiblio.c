@@ -288,3 +288,7 @@ int trierLivresAnnee(T_Bibliotheque *ptrB){
 
     return 1;
 }
+
+int AfficherLivresDispo(T_Bibliotheque *ptrB){
+	return 1;
+}
