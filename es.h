@@ -9,5 +9,6 @@
 char *lire(char *lachaine,int nbMAXcaracAsaisir);
 char *lireChaine(const char *, char * , int );
 void afficherChaine(const char *,const char *);
+int * lireAnnee(const char *  nomChamps, int *annee,int nbcarac);
 
 #endif

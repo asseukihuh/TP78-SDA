@@ -82,7 +82,8 @@ if (ptrB->nbLivres<CAPACITE_BIBLIO)// reste t il de la place?
 	saisirLivre(&(ptrB->etagere[ptrB->nbLivres]));
     //lire(code,K_MaxCode);
     if (verifCode(ptrB,code)== 1) lireChaine("CODE :",ptrB->etagere[ptrB->nbLivres].code ,K_MaxCode);
-}
+}	
+	lireAnnee("ANNEE : ",&(ptrB->etagere[ptrB->nbLivres].annee),5);
 	ptrB->nbLivres++;
 	return 1;
 	
@@ -105,9 +106,6 @@ if(ptrB->nbLivres==0)
 			afficherLivre( &(ptrB->etagere[i])  );
 			
 			}
-
-
-		
 		return 1;
 		}
 }

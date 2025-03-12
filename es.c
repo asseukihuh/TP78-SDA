@@ -46,6 +46,12 @@ printf("%s  ",nomChamps);
 lire(chaine,nbcarac); // lire du TP4 (modifiée)
 return chaine;
 }
+int * lireAnnee(const char *  nomChamps, int *annee,int nbcarac){
+	char charAnne[5];
+	printf("%s ",nomChamps);
+	*annee = atoi(lire(charAnne,nbcarac));
+	return annee;
+}
 
 void afficherChaine(const char *nomChamp, const char *valeur)
 {
