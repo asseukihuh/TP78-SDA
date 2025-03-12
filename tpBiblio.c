@@ -330,16 +330,18 @@ int AfficherLivresDispo(T_Bibliotheque *ptrB)
 
 int ListerEmpruntsRetard(T_Bibliotheque *ptrB)
 {
-	int i;
-	int retard = 0;
+	int i;	
+	time_t timess;
+	timess = time(NULL);
 	if(ptrB->nbLivres==0)
 		return 0;
 	else
 	{
 		for(i=0;i<ptrB->nbLivres;i++)
 		{
-			
-			if(strcmp(ptrB->etagere[i].emprunteur.nomemprunteur,"")== 0){
+			//printf("%ld\n",timess);
+			//printf("%ld\n", ptrB->etagere[i].emprunteur.timestamp);
+			if(timess - ptrB->etagere[i].emprunteur.timestamp > 20 && strcmp(ptrB->etagere[i].emprunteur.nomemprunteur,"")!= 0){
 				afficherLivre( &(ptrB->etagere[i]));
 			}
 		}

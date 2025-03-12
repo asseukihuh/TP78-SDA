@@ -167,6 +167,10 @@ switch(chx)
 			break;
 
 	case 12 :
+			reponse=ListerEmpruntsRetard(&B);
+			if (reponse==0)	
+					printf("La bibliotheque est vide\n");
+
 			break;
 	
 	}
