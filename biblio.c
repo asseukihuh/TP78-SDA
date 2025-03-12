@@ -101,7 +101,9 @@ switch(chx)
 			break;
 
 	case 6 :
+			printf("Code du livre : ");
 			lire(code, MAX_CODE);
+			printf("Nom de L'emprunteur :");
 			lire(emprunteur.nomemprunteur, K_MaxEmp);
 			reponse = empruntLivre(&B, code, emprunteur);
 			if (reponse == -1)
@@ -114,6 +116,7 @@ switch(chx)
 			break;
 	
 	case 7 :
+			printf("Code du livre : ");
 			lire(code, MAX_CODE);
 			reponse = restituerLivre(&B, code);
 			if (reponse == -1)
@@ -154,7 +157,16 @@ switch(chx)
 				printf("Bibliothèque triée par année avec succès");
 			}
 			break;
-			
+	case 11 :
+			reponse=AfficherLivresDispo(&B);
+			if (reponse==0)	
+					printf("La bibliotheque est vide\n");
+
+			break;
+
+	case 12 :
+			break;
+	
 	}
 
 }while(chx!=0);
