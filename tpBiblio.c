@@ -1,7 +1,7 @@
 #include "biblio.h"
 #include <time.h>
-
-
+char * jourSemaine[7] = {"Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"};
+char * moisAnnee[12] = {"Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Décembre"};
 //copiçt
 
 // Fonctions rechercher titre 
@@ -299,11 +299,11 @@ void setTimeEmp(T_Emp * ptrE){
     t = localtime(&(ptrE->timestamp)); 
 	printf("\n EMPRUNT \n");
 	ptrE->lejour=t->tm_wday;
-	printf("JOUR D'EMPRUNT : %d\n",ptrE->lejour);
+	printf("JOUR D'EMPRUNT : %s\n",jourSemaine[ptrE->lejour]);
 	ptrE->ledate=t->tm_mday;
 	printf("DATE D'EMPRUNT : %d\n",ptrE->ledate);
 	ptrE->lemois=t->tm_mon;
-	printf("MOIS D'EMPRUNT : %d\n",ptrE->lemois);
+	printf("MOIS D'EMPRUNT : %s\n",moisAnnee[ptrE->lemois]);
 	ptrE->lannee=1900 + t->tm_year;
 	printf("ANNNE D'EMPRUNT : %d\n",ptrE->lannee);
 	

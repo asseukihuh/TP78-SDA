@@ -114,7 +114,7 @@ switch(chx)
 				if(reponse == 0)
 					printf("Livre déja emprunté");
 				else
-					printf("Nom de l'emprunteur et date :%s", emprunteur.nomemprunteur);
+					printf("Nom de l'emprunteur : %s", emprunteur.nomemprunteur);
 			break;
 	
 	case 7 :
