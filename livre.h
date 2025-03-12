@@ -23,7 +23,7 @@ typedef int T_annee;
 
 // à utiliser pour gérer l'emprunt d'un livre 3eme partie 
 
-typedef enum {lu,ma,me,je,ve,sa,di} T_Jour ;
+typedef enum {di,lu,ma,me,je,ve,sa} T_Jour ;
 typedef enum  {janv,fevr,mars,avri,mai,juin,juil,aout,sept,octo,nove,dece} T_Mois ;
 
 typedef struct
