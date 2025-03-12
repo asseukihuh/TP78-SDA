@@ -295,12 +295,10 @@ int trierLivresAnnee(T_Bibliotheque *ptrB){
 
 
 void setTimeEmp(T_Emp * ptrE){
-	time_t timestamp; 
     struct tm * t; 
   
-    timestamp = time(NULL); 
-    t = localtime(&timestamp); 
-
+    ptrE->timestamp = time(NULL); 
+    t = localtime(ptrE->timestamp); 
 	printf("\n EMPRUNT \n");
 	ptrE->lejour=t->tm_wday;
 	printf("JOUR D'EMPRUNT : %d\n",ptrE->lejour);
@@ -328,5 +326,6 @@ int AfficherLivresDispo(T_Bibliotheque *ptrB)
 			}
 		}
 		return 1;
+	}
 
 }
