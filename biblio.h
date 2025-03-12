@@ -33,6 +33,6 @@ int trierLivresAuteur(T_Bibliotheque *ptrB);
 int trierLivresTitre(T_Bibliotheque *ptrB);
 int AfficherLivresDispo(T_Bibliotheque *ptrB);
 void setTimeEmp(T_Emp * ptrE);
-int ListerEmpruntsRetard(T_Bibliotheque *ptrB)
+int ListerEmpruntsRetard(T_Bibliotheque *ptrB);
 
 #endif

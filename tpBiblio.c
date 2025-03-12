@@ -1,8 +1,6 @@
 #include "biblio.h"
 #include <time.h>
 
-struct tm * timeEmp;
-time_t date ;
 
 //copiçt
 
@@ -298,7 +296,7 @@ void setTimeEmp(T_Emp * ptrE){
     struct tm * t; 
   
     ptrE->timestamp = time(NULL); 
-    t = localtime(ptrE->timestamp); 
+    t = localtime(&(ptrE->timestamp)); 
 	printf("\n EMPRUNT \n");
 	ptrE->lejour=t->tm_wday;
 	printf("JOUR D'EMPRUNT : %d\n",ptrE->lejour);
