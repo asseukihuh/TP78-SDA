@@ -2,6 +2,7 @@
 #define LIVRE_H
 
 #include "es.h"
+#include<time.h>
 
 # define MAX 20
 # define MAX_TITRE 60
@@ -33,6 +34,7 @@ T_Jour lejour;
 int ledate;
 T_Mois lemois; //janvier commence à 0 
 int lannee;
+time_t timestamp;
 } T_Emp;
 
 
