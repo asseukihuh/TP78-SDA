@@ -1,4 +1,5 @@
 #include "es.h"
+#include<time.h>
 
 
 char *lire(char* lachaine,int nbMAXcaracAsaisir)

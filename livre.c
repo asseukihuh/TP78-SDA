@@ -1,4 +1,5 @@
 #include "livre.h"
+#include<time.h>
 
 
 void saisirLivre(T_livre * ptrL)

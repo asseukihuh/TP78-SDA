@@ -1,4 +1,6 @@
 # include "biblio.h"
+#include<time.h>
+
 int menu()
 {
 	int choix;
