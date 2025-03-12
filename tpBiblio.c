@@ -1,4 +1,9 @@
 #include "biblio.h"
+#include <time.h>
+
+struct tm * timeEmp;
+time_t date ;
+
 //copiçt
 
 // Fonctions rechercher titre 
@@ -176,6 +181,7 @@ int empruntLivre(T_Bibliotheque *ptrB, T_Code code, T_Emp emprunteur){
     if (strcmp(ptrB->etagere[posLivre].emprunteur.nomemprunteur,"")!= 0) return 0;
     else{
         strcpy(ptrB->etagere[posLivre].emprunteur.nomemprunteur,emprunteur.nomemprunteur);
+		setTimeEmp(&(ptrB->etagere[posLivre].emprunteur));
         return 1;
     }
 }
@@ -285,6 +291,25 @@ int trierLivresAnnee(T_Bibliotheque *ptrB){
     }
 
     return 1;
+}
+
+void setTimeEmp(T_Emp * ptrE){
+	time_t timestamp; 
+    struct tm * t; 
+  
+    timestamp = time(NULL); 
+    t = localtime(&timestamp); 
+
+	printf("\n EMPRUNT \n");
+	ptrE->lejour=t->tm_wday;
+	printf("JOUR D'EMPRUNT : %d\n",ptrE->lejour);
+	ptrE->ledate=t->tm_mday;
+	printf("DATE D'EMPRUNT : %d\n",ptrE->ledate);
+	ptrE->lemois=t->tm_mon;
+	printf("MOIS D'EMPRUNT : %d\n",ptrE->lemois);
+	ptrE->lannee=1900 + t->tm_year;
+	printf("ANNNE D'EMPRUNT : %d\n",ptrE->lannee);
+	
 }
 
 int AfficherLivresDispo(T_Bibliotheque *ptrB){
