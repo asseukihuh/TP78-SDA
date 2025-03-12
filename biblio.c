@@ -116,6 +116,7 @@ switch(chx)
 			break;
 	
 	case 7 :
+			printf("Code du livre : ");
 			lire(code, MAX_CODE);
 			reponse = restituerLivre(&B, code);
 			if (reponse == -1)
@@ -163,7 +164,9 @@ switch(chx)
 
 			break;
 
-			
+	case 12 :
+			break;
+	
 	}
 
 }while(chx!=0);
